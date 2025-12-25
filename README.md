@@ -1,36 +1,106 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ishamashi.com
+![Preview](./public/screenshot.png)
 
-## Getting Started
+[![Next.js](https://img.shields.io/badge/Next.js-15-black?style=flat-square&logo=next.js)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-CSS-38B2AC?style=flat-square&logo=tailwind-css)](https://tailwindcss.com/)
+[![Vercel](https://img.shields.io/badge/Deployed_on-Vercel-000000?style=flat-square&logo=vercel)](https://vercel.com/)
 
-First, run the development server:
+> **The Digital Headquarters of Icho Ishamashi.**
+> 
+> *Engineering Lead & Technical Consultant.*
+
+This repository houses the source code for my personal portfolio and knowledge base. It marks a strategic shift from a "Developer Portfolio" to a "Consultant's Digital Garden," focusing on high-level architecture, business value, and engineering philosophy.
+
+## 🏗 Architecture & Tech Stack
+
+Built with a focus on **Radical Simplicity** and **SEO Performance**. No heavy client-side frameworks, just pure server-side rendered content where possible.
+
+- **Framework:** [Next.js 15 (App Router)](https://nextjs.org/) - Leveraging React Server Components (RSC).
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/) + [Shadcn/ui](https://ui.shadcn.com/) for a clean, editorial aesthetic.
+- **Content Engine:** MDX (Markdown + JSX) powered by `next-mdx-remote`.
+- **Typography:** Inter (Sans) & JetBrains Mono (Code).
+- **Deployment:** Vercel (Edge Network).
+
+## ⚡ Key Features
+
+- **Editorial Layout:** A minimalist design system inspired by premium editorial magazines, removing "Agency-style" clutter.
+- **MDX Blog Engine:** Write content in Markdown, render React components inside articles.
+- **Syntax Highlighting:** Beautiful code blocks using `rehype-pretty-code` (VS Code theme).
+- **Dark Mode:** System-aware theme switching via `next-themes`.
+- **SEO Optimized:** Auto-generated `sitemap.xml`, `robots.txt`, and dynamic Open Graph images.
+- **Responsive:** Mobile-first design for all viewports.
+
+## 📂 Project Structure
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+├── app/                  # Next.js App Router
+│   ├── blog/             # Blog listing & detail pages
+│   ├── projects/         # Project showcase pages
+│   └── layout.tsx        # Root layout (Navbar, Footer, SEO)
+├── components/           # React Components
+│   ├── ui/               # Shadcn UI primitives (Button, Card, etc.)
+│   └── ...               # Custom components (Navbar, ModeToggle)
+├── content/              # The Database (MDX Files)
+│   ├── posts/            # Blog articles
+│   └── projects/         # Case studies & portfolio items
+├── lib/                  # Utilities (MDX parsers, formatters)
+└── public/               # Static assets
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Getting Started
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+To run this project locally:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1.  **Clone the repository**
 
-## Learn More
+    ```bash
+    git clone [https://github.com/ishamashi/ishamashi-web.git](https://github.com/ishamashi/ishamashi-web.git)
+    cd ishamashi-web
+    ```
 
-To learn more about Next.js, take a look at the following resources:
+2.  **Install dependencies**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+    ```bash
+    npm install
+    ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3.  **Run the development server**
 
-## Deploy on Vercel
+    ```bash
+    npm run dev
+    ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4.  **Open locally**
+    Visit [http://localhost:3000](https://www.google.com/search?q=http://localhost:3000).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📝 Content Management
+
+Content is managed via the `content/` directory.
+
+  - To add a **Project**: Create a `.mdx` file in `content/projects/`.
+  - To add a **Blog Post**: Create a `.mdx` file in `content/posts/`.
+
+**Frontmatter Example:**
+
+```yaml
+---
+title: "Project Title"
+publishedAt: "2025-01-01"
+summary: "A brief description for SEO and preview cards."
+techstack: ["Next.js", "Python"]
+tags: ["Ventures", "Enterprise"]
+impact: ["Reduced costs by 40%", "Scaled to 1M users"]
+---
+```
+
+## 🤝 Contribution & License
+
+This project is open-sourced under the **MIT License**.
+Feel free to fork and use it as a template for your own portfolio, but please credit the original author.
+
+-----
+
+### "Code is a liability. Value is the asset."
+
+**[Icho Ishamashi](https://ishamashi.com)** *Forging Logic into Digital Reality.*
