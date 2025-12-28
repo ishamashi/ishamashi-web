@@ -83,9 +83,11 @@ export default function AboutPage() {
                   Contact Me
                 </a>
               </Button>
-              <Button variant="outline" className="w-full justify-start" size="lg">
-                <Download className="w-4 h-4 mr-2" />
-                Download CV
+              <Button variant="outline" asChild className="w-full justify-start" size="lg">
+                <a href="/ICHO ISHAMASHI CV.pdf" target="_blank" rel="noopener noreferrer">
+                  <Download className="w-4 h-4 mr-2" />
+                  Download CV
+                </a>
               </Button>
             </div>
 
