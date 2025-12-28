@@ -69,7 +69,7 @@ export default function AboutPage() {
       <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
         {/* --- LEFT COLUMN: STICKY SUMMARY (Executive Profile) --- */}
         <div className="md:col-span-4 relative">
-          <div className="sticky top-24 space-y-8">
+          <div className="space-y-8 md:sticky md:top-24">
             <div className="space-y-2">
               <h3 className="font-bold text-xl">Quick Info</h3>
               <p className="text-sm text-zinc-500">Professional overview & contacts.</p>
