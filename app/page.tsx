@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { ArrowRight, Cpu, MonitorCheck, Users, BarChart3, Code2, Terminal } from "lucide-react";
+import { ArrowRight, Cpu } from "lucide-react";
 import { getBlogPosts } from "@/lib/blog";
 import { getProjects } from "@/lib/projects";
 
@@ -28,25 +28,23 @@ export default function Home() {
     .slice(0, 2);
 
   return (
-    // FIX 1: overflow-x-hidden di wrapper utama mencegah scroll samping
     <div className="flex flex-col min-h-screen overflow-x-hidden">
       {/* --- HERO SECTION --- */}
       <section className="container mx-auto max-w-5xl px-4 py-20 md:py-32 flex flex-col items-start gap-6">
-        {/* FIX 2: Badge h-auto & whitespace-normal biar bisa turun baris di HP */}
+        {/* Badge: Tetap pertahankan fix mobile */}
         <Badge variant="outline" className="px-3 py-1.5 border-zinc-300 text-zinc-600 h-auto whitespace-normal text-left flex items-start max-w-full">
           <span className="w-2 h-2 rounded-full bg-blue-600 mr-2 mt-1.5 animate-pulse shrink-0"></span>
           <span className="leading-snug">Available for Consulting & Strategic Roles</span>
         </Badge>
 
-        {/* FIX 3: Font size responsive (4xl di HP, 6xl di Laptop) */}
         <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50 max-w-4xl leading-tight">
           Architecting Systems, <br className="hidden md:block" />
           <span className="text-zinc-500">Leading Digital Transformation.</span>
         </h1>
 
-        <p className="text-lg md:text-xl text-zinc-500 max-w-2xl leading-relaxed">Icho Ishamashi. Engineering Leader dengan 10+ tahun pengalaman. Spesialisasi dalam manajemen tim teknis, perancangan arsitektur sistem, dan strategi efisiensi bisnis.</p>
+        {/* REVISI: English Profile Description */}
+        <p className="text-lg md:text-xl text-zinc-500 max-w-2xl leading-relaxed">Icho Ishamashi. Engineering Leader with over a decade of experience. Specializing in technical team management, scalable system architecture, and business efficiency strategy.</p>
 
-        {/* FIX 4: Tombol jadi vertikal di HP (flex-col) biar enak dipencet */}
         <div className="flex flex-col sm:flex-row gap-4 mt-4 w-full sm:w-auto">
           <Button asChild size="lg" className="rounded-full px-8 w-full sm:w-auto">
             <Link href="/about">
@@ -84,9 +82,8 @@ export default function Home() {
           {/* Hook */}
           <div className="md:col-span-4">
             <h2 className="text-3xl font-bold tracking-tight mb-4">Beyond the Code.</h2>
-            <p className="text-zinc-500 leading-relaxed text-sm md:text-base">
-              Software engineering bukan sekadar menulis sintaks. Ini tentang menerjemahkan ambisi bisnis menjadi sistem yang <i>resilient</i> dan tim yang <i>high-performing</i>.
-            </p>
+            {/* REVISI: English Hook */}
+            <p className="text-zinc-500 leading-relaxed text-sm md:text-base">Software engineering is not just about writing syntax. It is about translating business ambitions into resilient systems and high-performing teams.</p>
           </div>
 
           {/* Pillars */}
@@ -96,7 +93,8 @@ export default function Home() {
                 <span className="w-2 h-2 rounded-full bg-zinc-300 group-hover:bg-blue-600 transition-colors mr-3 shrink-0"></span>
                 Strategic Architecture
               </h3>
-              <p className="text-zinc-500 text-sm leading-relaxed pl-5 border-l border-zinc-200 dark:border-zinc-800 ml-1">Menghapus gap antara kebutuhan bisnis dan eksekusi teknis. Saya membantu merancang sistem yang tidak hanya hidup hari ini, tapi siap untuk skala 10x lipat di masa depan.</p>
+              {/* REVISI: English Description */}
+              <p className="text-zinc-500 text-sm leading-relaxed pl-5 border-l border-zinc-200 dark:border-zinc-800 ml-1">Bridging the gap between business needs and technical execution. I help design systems that don't just survive today, but are ready to scale 10x in the future.</p>
             </div>
 
             <div className="group">
@@ -104,7 +102,8 @@ export default function Home() {
                 <span className="w-2 h-2 rounded-full bg-zinc-300 group-hover:bg-purple-600 transition-colors mr-3 shrink-0"></span>
                 Engineering Culture
               </h3>
-              <p className="text-zinc-500 text-sm leading-relaxed pl-5 border-l border-zinc-200 dark:border-zinc-800 ml-1">Membangun standar development (SOP), mentoring, dan alur kerja yang mengubah tim teknis dari sekadar "tukang coding" menjadi problem solver yang proaktif.</p>
+              {/* REVISI: English Description */}
+              <p className="text-zinc-500 text-sm leading-relaxed pl-5 border-l border-zinc-200 dark:border-zinc-800 ml-1">Technology is just a tool; people are the key. I build development standards (SOPs), mentorship programs, and workflows that transform technical teams from mere "coders" into proactive problem solvers.</p>
             </div>
 
             <div className="group">
@@ -112,9 +111,8 @@ export default function Home() {
                 <span className="w-2 h-2 rounded-full bg-zinc-300 group-hover:bg-green-600 transition-colors mr-3 shrink-0"></span>
                 Operational Efficiency
               </h3>
-              <p className="text-zinc-500 text-sm leading-relaxed pl-5 border-l border-zinc-200 dark:border-zinc-800 ml-1">
-                Mengidentifikasi <i>bottleneck</i> dalam sistem legacy maupun cloud infrastructure. Fokus pada optimasi performa dan pengurangan <i>technical debt</i>.
-              </p>
+              {/* REVISI: English Description */}
+              <p className="text-zinc-500 text-sm leading-relaxed pl-5 border-l border-zinc-200 dark:border-zinc-800 ml-1">Identifying bottlenecks in legacy systems or cloud infrastructure. Focusing on performance optimization and reducing technical debt that often hinders innovation.</p>
             </div>
           </div>
         </div>
@@ -126,7 +124,8 @@ export default function Home() {
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 gap-4">
             <div>
               <h2 className="text-2xl font-bold tracking-tight mb-2">Selected Projects</h2>
-              <p className="text-zinc-500">Kombinasi antara Software & Hardware Engineering.</p>
+              {/* REVISI: English Subtitle */}
+              <p className="text-zinc-500">A convergence of Software & Hardware Engineering.</p>
             </div>
             <Link href="/projects" className="text-sm font-medium hover:underline hidden md:block">
               View all projects →
@@ -172,7 +171,8 @@ export default function Home() {
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 gap-4">
           <div>
             <h2 className="text-2xl font-bold tracking-tight mb-2">Latest Thoughts</h2>
-            <p className="text-zinc-500">Tulisan seputar Engineering, Logika, dan Bisnis.</p>
+            {/* REVISI: English Subtitle */}
+            <p className="text-zinc-500">Writings on Engineering, Logic, and Business.</p>
           </div>
           <Link href="/blog" className="text-sm font-medium hover:underline hidden md:block">
             Read all posts →
@@ -181,7 +181,6 @@ export default function Home() {
 
         <div className="divide-y divide-zinc-100 dark:divide-zinc-800">
           {latestPosts.map((post) => (
-            // FIX 5: negative margin (-mx-4) hanya di layar md ke atas. Di HP padding normal.
             <Link key={post.metadata.slug} href={`/blog/${post.metadata.slug}`} className="group py-6 flex flex-col md:flex-row md:items-center justify-between gap-4 md:hover:bg-zinc-50 md:dark:hover:bg-zinc-900/50 md:-mx-4 md:px-4 rounded-xl transition-colors">
               <div className="flex flex-col gap-1">
                 <span className="text-xs font-mono text-zinc-400 mb-1">{post.metadata.publishedAt}</span>
@@ -221,17 +220,20 @@ export default function Home() {
           <div className="md:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-10">
             <div>
               <h3 className="text-lg font-semibold text-zinc-900 dark:text-zinc-100 mb-2">Radical Simplicity</h3>
-              <p className="text-zinc-500 leading-relaxed text-sm">Kompleksitas adalah musuh dari skalabilitas. Saya menolak over-engineering. Sistem terbaik adalah sistem yang paling sederhana.</p>
+              {/* REVISI: English Description */}
+              <p className="text-zinc-500 leading-relaxed text-sm">Complexity is the enemy of scalability. I reject over-engineering. The best system is the simplest one to solve the problem at hand.</p>
             </div>
 
             <div>
               <h3 className="text-lg font-semibold text-zinc-900 dark:text-zinc-100 mb-2">Data over Intuition</h3>
-              <p className="text-zinc-500 leading-relaxed text-sm">(Epistemological approach). Kita tidak bisa memperbaiki apa yang tidak bisa kita ukur. Keputusan teknis harus didasarkan pada metrik nyata.</p>
+              {/* REVISI: English Description */}
+              <p className="text-zinc-500 leading-relaxed text-sm">(Epistemological approach). We cannot fix what we cannot measure. Technical decisions must be based on tangible metrics, not assumptions or trends.</p>
             </div>
 
             <div>
               <h3 className="text-lg font-semibold text-zinc-900 dark:text-zinc-100 mb-2">Business Aligned</h3>
-              <p className="text-zinc-500 leading-relaxed text-sm">Teknologi tidak hidup di ruang hampa. Setiap baris kode dan arsitektur server harus memiliki justifikasi bisnis yang jelas (ROI).</p>
+              {/* REVISI: English Description */}
+              <p className="text-zinc-500 leading-relaxed text-sm">Technology does not exist in a vacuum. Every line of code and server architecture must have a clear business justification (ROI) and direct operational impact.</p>
             </div>
 
             {/* Connection */}

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getProjects, ProjectMetadata } from "@/lib/projects";
+import { getProjects } from "@/lib/projects";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ArrowUpRight, Rocket, Building2, Globe, Cpu } from "lucide-react";
@@ -24,13 +24,11 @@ export default function ProjectsPage() {
   });
 
   // --- STRATEGI PENALARAN: GROUPING ---
-  // Kita pisahkan projek berdasarkan "Kasta" Impact-nya
 
-  // 1. Signature Ventures: Proyek di mana lu adalah Founder/Innovator (Techne, Alchecode, AdMeasurement)
+  // 1. Signature Ventures: Proyek di mana lu adalah Founder/Innovator
   const ventures = allProjects.filter((p) => p.metadata.tags?.includes("Ventures"));
 
-  // 2. High-Impact Work: Enterprise Systems & Digital Ecosystems (ElKabron, Airport, FansFirst)
-  // Exclude yang udah masuk ventures biar gak duplikat
+  // 2. High-Impact Work: Enterprise Systems & Digital Ecosystems
   const professionalWork = allProjects.filter((p) => !p.metadata.tags?.includes("Ventures") && !p.metadata.tags?.includes("Legacy"));
 
   // 3. The Archive: Proyek Legacy/Awal Karir
@@ -41,7 +39,8 @@ export default function ProjectsPage() {
       {/* HEADER: Editorial Style */}
       <header className="mb-20 max-w-3xl">
         <h1 className="text-5xl font-bold tracking-tight mb-6 text-zinc-900 dark:text-zinc-50">Selected Works</h1>
-        <p className="text-xl text-zinc-500 leading-relaxed">Koleksi inisiatif strategis dan rekayasa sistem yang saya bangun selama satu dekade. Dari merintis startup edukasi hingga mentransformasi operasional perusahaan skala enterprise.</p>
+        {/* REVISI: English Description */}
+        <p className="text-xl text-zinc-500 leading-relaxed">A collection of strategic initiatives and engineering systems crafted over a decade. From founding educational startups to driving digital transformation in enterprise operations.</p>
       </header>
 
       {/* --- SECTION 1: SIGNATURE VENTURES (Hero Cards) --- */}
@@ -72,7 +71,7 @@ export default function ProjectsPage() {
                 <CardContent>
                   <p className="text-zinc-500 mb-6 leading-relaxed">{project.metadata.summary}</p>
 
-                  {/* Impact Highlights (Penting buat Ventures) */}
+                  {/* Impact Highlights */}
                   <div className="space-y-2 border-t border-zinc-200 dark:border-zinc-800 pt-4 mt-auto">
                     {project.metadata.impact?.slice(0, 2).map((item, i) => (
                       <div key={i} className="flex items-start text-xs font-medium text-zinc-700 dark:text-zinc-300">

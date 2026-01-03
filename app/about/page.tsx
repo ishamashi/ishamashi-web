@@ -1,7 +1,7 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { Briefcase, MapPin, Download, Languages, Mail, Building2, Rocket, ArrowUpRight } from "lucide-react";
+import { Briefcase, MapPin, Download, Languages, Mail, Building2, Rocket } from "lucide-react";
 
 export const metadata = {
   title: "About - Icho Ishamashi",
@@ -19,12 +19,10 @@ export default function AboutPage() {
           <h2 className="text-2xl font-medium text-zinc-800 dark:text-zinc-200 mb-6">Engineering Lead & Technical Consultant</h2>
           <div className="space-y-4 text-lg text-zinc-500 leading-relaxed">
             <p>
-              Setelah satu dekade berkecimpung di dalam kode, fokus saya kini bergeser:
-              <strong className="text-zinc-900 dark:text-zinc-100"> dari membangun fitur menjadi membangun ekosistem.</strong>
+              After a decade immersed in code, my focus has shifted:
+              <strong className="text-zinc-900 dark:text-zinc-100"> from building features to building ecosystems.</strong>
             </p>
-            <p>
-              Saya membantu perusahaan menerjemahkan kebutuhan bisnis menjadi arsitektur teknis yang <i>scalable</i>. Saya tidak lagi sekadar menulis baris kode, tapi memimpin tim teknis, merancang strategi digital, dan memastikan teknologi menjadi aset kompetitif.
-            </p>
+            <p>I help companies translate business needs into scalable technical architectures. Beyond just writing code, I lead technical teams, design digital strategies, and ensure technology becomes a competitive asset rather than just a cost center.</p>
           </div>
         </header>
 
@@ -44,7 +42,7 @@ export default function AboutPage() {
               </div>
               <h4 className="font-bold text-lg mb-1">AdMeasurement Venture</h4>
               <p className="text-xs text-zinc-500 mb-3 uppercase tracking-wider font-semibold">Founder & Innovator</p>
-              <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">Mengembangkan solusi AdTech berbasis AI dan IoT untuk mengukur efektivitas iklan OOH (Out-of-Home) menggunakan analisis lalu lintas real-time.</p>
+              <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">Engineered an innovative AdTech solution to measure OOH advertising effectiveness by analyzing real-world traffic using custom devices and AI software.</p>
             </div>
 
             {/* Venture 2 */}
@@ -57,7 +55,7 @@ export default function AboutPage() {
               </div>
               <h4 className="font-bold text-lg mb-1">Techne.ID</h4>
               <p className="text-xs text-zinc-500 mb-3 uppercase tracking-wider font-semibold">Founder</p>
-              <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">Platform edukasi teknologi yang fokus mencetak talenta engineering siap kerja. Membangun kurikulum berbasis industri dan komunitas developer.</p>
+              <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">Established an educational platform to build a community and provide accessible learning paths for aspiring web and AI developers in Indonesia.</p>
             </div>
           </div>
         </div>
@@ -84,7 +82,7 @@ export default function AboutPage() {
                 </a>
               </Button>
               <Button variant="outline" asChild className="w-full justify-start" size="lg">
-                <a href="/ICHO ISHAMASHI CV.pdf" target="_blank" rel="noopener noreferrer">
+                <a href="/cv.pdf" target="_blank" rel="noopener noreferrer">
                   <Download className="w-4 h-4 mr-2" />
                   Download CV
                 </a>
@@ -137,10 +135,11 @@ export default function AboutPage() {
               </div>
               <div className="text-base font-semibold text-blue-600 dark:text-blue-400 mb-4">ElKabron Bali</div>
 
-              <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed mb-4">Bertanggung jawab penuh atas infrastruktur IT dan transformasi digital. Fokus pada stabilitas operasional high-traffic venue.</p>
+              <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed mb-4">Full responsibility for IT infrastructure and digital transformation, focusing on operational stability for a high-traffic luxury venue.</p>
               <ul className="space-y-2 text-zinc-600 dark:text-zinc-400 text-sm list-disc ml-4 marker:text-zinc-300">
-                <li>Merancang arsitektur IT berbasis Cloud yang meningkatkan keamanan dan kolaborasi antar departemen.</li>
-                <li>Memimpin digitalisasi workflow perusahaan, menggantikan proses manual dengan otomatisasi.</li>
+                <li>Designed and deployed a scalable IT architecture on Cloud Platform, significantly enhancing system performance, security, and inter-departmental collaboration.</li>
+                <li>Pioneered the complete digitalization of company workflows, replacing manual processes with automated solutions to boost company-wide efficiency.</li>
+                <li>Orchestrated end-to-end technical operations, from network infrastructure to software development.</li>
                 <li>Stack: GCP, Python, Next.js, Network Infrastructure.</li>
               </ul>
             </div>
@@ -154,10 +153,11 @@ export default function AboutPage() {
               </div>
               <div className="text-base font-medium text-zinc-500 mb-4">FansFirst Tickets Inc (Canada - Remote)</div>
 
-              <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed mb-4">Memimpin tim teknis remote untuk marketplace tiket sekunder di Kanada.</p>
+              <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed mb-4">Led a remote technical team for a secondary ticket marketplace in Canada.</p>
               <ul className="space-y-2 text-zinc-600 dark:text-zinc-400 text-sm list-disc ml-4 marker:text-zinc-300">
-                <li>Melakukan overhaul arsitektur backend untuk skalabilitas dan mengurangi technical debt.</li>
-                <li>Mengembangkan modul reporting admin yang meningkatkan efisiensi operasional back-office.</li>
+                <li>Spearheaded the strategic overhaul of the backend system architecture to significantly boost performance, improve scalability, and reduce long-term technical debt.</li>
+                <li>Engineered and deployed key product enhancements, including a streamlined ticket management workflow and an advanced admin reporting module.</li>
+                <li>Led, mentored, and managed a remote team of 3 programmers in end-to-end development.</li>
                 <li>Stack: JavaScript, Python, NoSQL, AWS.</li>
               </ul>
             </div>
@@ -171,10 +171,10 @@ export default function AboutPage() {
               </div>
               <div className="text-base font-medium text-zinc-500 mb-4">PT Lintas Media Danawa</div>
 
-              <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed mb-4">Mengelola 2 tim engineering (total 7 programmer) untuk delivery proyek aplikasi skala besar.</p>
+              <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed mb-4">Directed 2 engineering teams (total 7 programmers) in the successful delivery of large-scale client application projects.</p>
               <ul className="space-y-2 text-zinc-600 dark:text-zinc-400 text-sm list-disc ml-4 marker:text-zinc-300">
-                <li>Arsitek utama dalam refactoring sistem backend legacy menjadi modern application flow.</li>
-                <li>Membangun engineering culture melalui mentorship intensif.</li>
+                <li>Architected and led the complete refactoring of a legacy backend system, establishing a modern application flow.</li>
+                <li>Cultivated a high-quality engineering culture through direct mentorship and proactive issue resolution.</li>
                 <li>Stack: PHP, PostgreSQL, Nginx, GCP, Linux.</li>
               </ul>
             </div>
@@ -187,7 +187,7 @@ export default function AboutPage() {
                 <span className="text-sm font-mono text-zinc-400 whitespace-nowrap">Jan 2022 — Jul 2023</span>
               </div>
               <div className="text-base font-medium text-zinc-500 mb-4">Cognitiv Media</div>
-              <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed text-sm">Memimpin pengembangan solusi media berbasis teknologi, memastikan integrasi sistem yang mulus dan performa tinggi untuk kebutuhan klien.</p>
+              <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed text-sm">Led the development of technology-based media solutions, ensuring seamless system integration and high performance for client needs.</p>
             </div>
 
             {/* Job 5: Prisma */}
@@ -198,7 +198,7 @@ export default function AboutPage() {
                 <span className="text-sm font-mono text-zinc-400 whitespace-nowrap">Aug 2020 — Mar 2022</span>
               </div>
               <div className="text-base font-medium text-zinc-500 mb-4">PT Prisma Harapan</div>
-              <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed text-sm">Mengembangkan dan memelihara platform Prisma Ads. Fokus pada optimasi kode dan fitur baru.</p>
+              <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed text-sm">Developed and maintained the Prisma Ads platform. Focused on code optimization and new feature implementation.</p>
             </div>
 
             {/* Job 6: Playy */}
@@ -209,7 +209,7 @@ export default function AboutPage() {
                 <span className="text-sm font-mono text-zinc-400 whitespace-nowrap">Nov 2019 — Aug 2020</span>
               </div>
               <div className="text-base font-medium text-zinc-500 mb-4">Playy.World Pte.Ltd (Singapore)</div>
-              <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed text-sm">Bekerja secara remote untuk startup Singapura dalam pengembangan fitur fullstack.</p>
+              <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed text-sm">Worked remotely for a Singaporean startup on full-stack feature development.</p>
             </div>
 
             {/* Job 7: Konekthing */}
@@ -220,7 +220,7 @@ export default function AboutPage() {
                 <span className="text-sm font-mono text-zinc-400 whitespace-nowrap">Apr 2019 — Apr 2020</span>
               </div>
               <div className="text-base font-medium text-zinc-500 mb-4">PT Konekthing Benda Pintar</div>
-              <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed text-sm">Awal karir di dunia IoT. Mengembangkan dashboard untuk monitoring perangkat pintar.</p>
+              <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed text-sm">Early career in IoT. Developed dashboards for smart device monitoring.</p>
             </div>
           </div>
         </div>

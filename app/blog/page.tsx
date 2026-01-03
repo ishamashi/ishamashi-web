@@ -21,7 +21,8 @@ export default function BlogPage() {
       {/* HEADER: Editorial Style */}
       <header className="mb-20 border-b border-zinc-100 dark:border-zinc-800 pb-12">
         <h1 className="text-5xl font-bold tracking-tight mb-6 text-zinc-900 dark:text-zinc-50">Writing.</h1>
-        <p className="text-xl text-zinc-500 leading-relaxed max-w-2xl">Eksplorasi tentang arsitektur sistem, strategi tim, dan irisan antara logika kode dengan kebutuhan bisnis.</p>
+        {/* REVISI: English Description */}
+        <p className="text-xl text-zinc-500 leading-relaxed max-w-2xl">Explorations on system architecture, engineering strategy, and the intersection of code logic with business reality.</p>
       </header>
 
       {/* ARTICLE LIST */}
@@ -49,7 +50,8 @@ export default function BlogPage() {
 
         {allBlogs.length === 0 && (
           <div className="py-20 text-center">
-            <p className="text-zinc-400">Belum ada artikel yang dipublikasikan.</p>
+            {/* REVISI: English Empty State */}
+            <p className="text-zinc-400">No articles published yet.</p>
           </div>
         )}
       </div>
